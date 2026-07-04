@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
-import { promises } from 'dns';
+
 
 @Injectable()
 export class UsersService {
@@ -13,20 +13,20 @@ export class UsersService {
 
     async findByEmail(email:string): Promise<User | null> {
         return this.userRepository.findOne({
-            where: {email},
+            where: {email: email},
         });
     }
 
     async findById(id:string): Promise<User | null> {
         return this.userRepository.findOne({
-            where: {id},
+            where: {id: id},
         });
     }
 
     async createUser(name: string, email: string, hashedPassword: string): Promise<User> {
         const user = this.userRepository.create({
-            name,
-            email,
+            name:name,
+            email: email,
             password: hashedPassword,
         });
         return this.userRepository.save(user)
