@@ -33,7 +33,7 @@ import { TicketsModule } from './tickets/tickets.module';
 
     TicketsModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  // controllers: [AppController],
+  // providers: [AppService],
 })
 export class AppModule {}
