@@ -20,4 +20,14 @@ export class TicketsService {
 
         return this.ticketRepository.save(ticket);
     }
+
+    async findAllByUser(userId: string): Promise<Ticket[]> {
+        return this.ticketRepository.find({
+            where: 
+                {userId: userId},
+                order: {
+                    createdAt: 'DESC',
+                },
+        });
+    }
 }
