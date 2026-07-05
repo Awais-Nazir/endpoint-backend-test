@@ -19,39 +19,13 @@ A simple Ticket Management REST API built with **NestJS**, **PostgreSQL**, **Typ
 * bcrypt
 * class-validator
 
-## Architecture Overview
+<details>
+  <summary>Click here to open</summary>
 
-```mermaid
-graph TD
-    A[AppModule] --> B[AuthModule]
-    A --> C[UsersModule]
-    A --> D[TicketsModule]
+![High Level Architecture diagram](high-level-architecture.png)
 
-    B --> E[AuthController]
-    B --> F[AuthService]
-    B --> G[JwtStrategy]
-    B --> H[JwtModule]
-    B --> I[PassportModule]
-    B --> C
 
-    C --> J[UsersService]
-    C --> K[User Entity]
-
-    D --> L[TicketsController]
-    D --> M[TicketsService]
-    D --> N[Ticket Entity]
-
-    L --> O[JwtAuthGuard]
-    O --> G
-    G --> J
-
-    F --> J
-    J --> P[(PostgreSQL)]
-    M --> P
-
-    K --> Q[One User has Many Tickets]
-    Q --> N
-```
+</details>
 
 ## Project Setup
 
