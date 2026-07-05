@@ -142,3 +142,7 @@ Import the collection into Postman and follow this flow:
 * A user can only access, update, or delete their own tickets.
 * TypeORM `synchronize` is enabled for development to automatically create database tables.
 
+
+## Author
+
+* [@Awais Nazir](https://github.com/Awais-Nazir)
