@@ -19,8 +19,9 @@ A simple Ticket Management REST API built with **NestJS**, **PostgreSQL**, **Typ
 * bcrypt
 * class-validator
 
+## High Level Architecture Diagram
 <details>
-  <summary>## High Level Architecture Diagram</summary>
+  <summary>click here to open</summary>
 
 ![High Level Architecture diagram](high-level-architecture.png)
 
